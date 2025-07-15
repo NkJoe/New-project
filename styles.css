@@ -1,0 +1,404 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: transparent;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.nav-links li a:hover {
+  color: #00bfff;
+}
+
+/* Hamburger menu (hidden by default) */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #565656d6;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+  }
+  .nav-links li a {
+    color: white;
+    padding: 0.5rem 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* welcome section*/
+.welcome {
+  background-image: url('tom-barrett-hgGplX3PFBg-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.welcome h1 {
+  font-size: 3rem;
+  margin-bottom: 0rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  display: flex;
+  margin-left: 1px;
+}
+.welcome h5 {
+  margin-top: 1%;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  display: flex;
+  margin-left: 7px;
+  font-family:'Courier New', Courier, monospace;
+  letter-spacing: 0.4em;
+}
+.welcome h3 {
+  font-size: small;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  justify-content: end;
+  align-items: end;
+  display: grid;
+  place-items: end;
+}
+.welcome .button {
+  background-color: #00bfff;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: 40px;
+  transition: background-color 0.7s;
+}
+.welcome .button:hover {
+  background-color: #0080ff;
+}
+
+/* Vision section */
+.vision {
+  background-image: url('paul-earle-xJ2tjuUHD9M-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.vision-text-1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+.vision-text-2 {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  text-transform: uppercase;
+}
+.vision .button {
+  background-color: #00bfff;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+  transition: background-color 0.7s;
+}
+.vision .button:hover {
+ background-color: #0080ff;
+}
+
+/* Services section */
+.services {
+  background-image: url('ilia-bronskiy-IxqUT4zy89U-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.service-text {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.812);
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: white;
+}
+.service-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 1px 1px 2px rgba(17, 17, 17, 0.333);
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: rgb(5, 5, 5);
+}
+.service-cards .card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 1.2rem;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.services .button {
+  background-color: #00bfff;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+  transition: background-color 0.7s;
+}
+.services .button:hover {
+ background-color: #0080ff;
+}
+
+/* == ANIMATION STYLES ==*/
+/* fade-in on load */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bgZoom {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+.bg-zoom {
+  background-image: url('ilia-bronskiy-IxqUT4zy89U-unsplash.jpg');
+  background-image: url('paul-earle-xJ2tjuUHD9M-unsplash.jpg');
+  background-image: url('tom-barrett-hgGplX3PFBg-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: bgZoom 1s ease-in-out infinite;
+}
+@keyframes zoomGlow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #00f7ff;
+  }
+}
+.button-zoom-glow {
+  padding: 12px 24px;
+  background-color: #16a085;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button-zoom-glow:hover {
+  animation: zoomGlow 0.3s forwards;
+}
+
+/* Welcome animation */
+.welcome {
+  animation: fadeIn 0.3s ease-out;
+  animation: bgZoom 10s ease-in-out infinite;
+}
+.welcome-text {
+  animation: fadeIn 1s ease-out;
+}
+.welcome .button:hover {
+   animation: zoomGlow 0.3s forwards;
+}
+/* vision animation*/
+.vision {
+   animation: fadeIn 0.3s ease-out;
+   animation: bgZoom 10s ease-in-out infinite;
+}
+.vision-text-1 {
+  animation: fadeIn 1s ease-out;
+}
+.vision-text-2 {
+  animation: fadeIn 1s ease-in-out;
+}
+.vision .button:hover {
+   animation: zoomGlow 0.3s forwards;
+}
+/* services animation */
+.services {
+   animation: fadeIn 0.3s ease-out;
+   animation: bgZoom 10s ease-in-out infinite;
+}
+.card {
+  animation: fadeIn 1s ease-out;
+}
+.services .button:hover {
+   animation: zoomGlow 0.3s forwards;
+}
+
+
+/* Fade-in effect for all sections */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease-out, transform 4s ease-out;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effect on service cards */
+.card {
+  transition: transform 1s ease, box-shadow 0.5s ease;
+}
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  size: 0 0 250px;
+  position: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: auto;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-about {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 1rem;
+}
+.footer h5 {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li a {
+  color: #bbb;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a:hover {
+  color: #00bfff;
+}
+
+.social-icons a img {
+  width: 24px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+  }}
