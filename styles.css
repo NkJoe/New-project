@@ -170,6 +170,7 @@ body {
 .services {
   background-image: url('ilia-bronskiy-IxqUT4zy89U-unsplash.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   padding: 3rem 2rem;
   text-align: center;
@@ -228,25 +229,38 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 @keyframes bgZoom {
-  0% {
-    background-size: 100%;
+  from {
+    background-size: 250%;
   }
-  50% {
-    background-size: 110%;
+  to {
+    background-size: 350%; /* zoom in */
   }
-  100% {
-    background-size: 100%;
+}
+.bg-zoom {
+  background-image: url('paul-earle-xJ2tjuUHD9M-unsplash.jpg');
+  background-image: url('tom-barrett-hgGplX3PFBg-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: bgZoom 1s ease-in-out infinite alternate;
+}
+
+@keyframes bgZoom {
+  from {
+    background-size: 350%;
+  }
+  to {
+    background-size: 450%; /* zoom in */
   }
 }
 .bg-zoom {
   background-image: url('ilia-bronskiy-IxqUT4zy89U-unsplash.jpg');
-  background-image: url('paul-earle-xJ2tjuUHD9M-unsplash.jpg');
-  background-image: url('tom-barrett-hgGplX3PFBg-unsplash.jpg');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  animation: bgZoom 1s ease-in-out infinite;
+  animation: bgZoom 1s ease-in-out infinite alternate;
 }
+
 @keyframes zoomGlow {
   0% {
     transform: scale(1);
@@ -271,7 +285,7 @@ body {
 /* Welcome animation */
 .welcome {
   animation: fadeIn 0.3s ease-out;
-  animation: bgZoom 10s ease-in-out infinite;
+  animation: bgZoom 10s ease-in-out infinite alternate;
 }
 .welcome-text {
   animation: fadeIn 1s ease-out;
@@ -282,7 +296,7 @@ body {
 /* vision animation*/
 .vision {
    animation: fadeIn 0.3s ease-out;
-   animation: bgZoom 10s ease-in-out infinite;
+   animation: bgZoom 10s ease-in-out infinite alternate;
 }
 .vision-text-1 {
   animation: fadeIn 1s ease-out;
@@ -296,7 +310,7 @@ body {
 /* services animation */
 .services {
    animation: fadeIn 0.3s ease-out;
-   animation: bgZoom 10s ease-in-out infinite;
+   animation: bgZoom 10s ease-in-out infinite alternate;
 }
 .card {
   animation: fadeIn 1s ease-out;
@@ -398,4 +412,3 @@ body {
   font-size: 0.9rem;
   color: #aaa;
 }
-
