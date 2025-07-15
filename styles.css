@@ -11,6 +11,7 @@ body {
 
 /* Navbar container */
 .navbar {
+  background-color:#333;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +34,7 @@ body {
 }
 .nav-links li a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 254, 254);
   transition: color 0.3s;
   font-size: 1rem;
   font-weight: 700;
@@ -241,7 +242,7 @@ body {
   background-image: url('ilia-bronskiy-IxqUT4zy89U-unsplash.jpg');
   background-image: url('paul-earle-xJ2tjuUHD9M-unsplash.jpg');
   background-image: url('tom-barrett-hgGplX3PFBg-unsplash.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   animation: bgZoom 1s ease-in-out infinite;
@@ -397,5 +398,4 @@ body {
   font-size: 0.9rem;
   color: #aaa;
 }
-
 
