@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box !important;
+    margin: 5px;
+    padding: 1px;
+}
+
+body {
+    background-image: url('j-m-4igCpD-Lnfg-unsplash.jpg');
+    background-position: center;
+    font-family: Arial, sans-serif;
+    background-color: #1176089a;;
+    display: flow-root;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+h1, h2, h3 {
+    color: #f8f5f5;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.header {
+    align-items: center;
+    justify-content: baseline center;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #cbc3c3;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 450;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #00bfff;
+    color: #fff;
+    width: 20%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0080ff;
+}
+
+.message {
+    margin-top: 15px;
+    color: red;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+   background-color:#333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  position: relative;
+}
+
+.navbar .brand {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0px 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #00bfff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+ /* Toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+@media (min-width: 640px) {
+  .nav-links {
+    display: flex;
+  }
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  font-size: 26px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  }
+
+  .menu-toggle.active {
+    color: #02330ddc;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+    .nav-menu.show {
+        display: flex;
+    }
+    
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #444;
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .nav-links li:last-child {
+    margin-bottom: 0;
+  }
+}

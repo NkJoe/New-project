@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Open Heaven Parish</title>
+        <link rel="icon" href="Rccg_logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="styles.css" />
+     </head>
+
+     <body>
+        <nav class="navbar">
+            <div class="brand"><img src="Rccg_logo.png" alt="" style="width: 60px; height: auto;"></div>
+             <button class="menu-toggle" id="menuToggle">&#9776;</button> 
+             <ul class="nav-links" id="navLinks">
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Contact</a></li>
+             <li><a href="#">Sign Up</a></li>
+             <li><a href="#">Login</a></li>
+             <li><a href="#"><img src="search-icon.png" alt="" style="width: 50px; height: auto;"></a></li>
+             </ul>
+        </nav>
+         <script src="script.js"></script>
+
+        <div class="images">
+            <img src="Rccg_logo.png" alt="" style="width: 160px; height: auto; margin-top: 20px;">
+        </div>
+
+        <div class="header">
+            <h1>Welcome to Open Heaven Parish</h1>
+               <h2>Members Registration</h2> 
+        </div>
+    <p>
+    <br>
+      <div class="container">
+        <form id="signupform">
+            <h2>Sign Up</h2>
+        <br> 
+             <div class="input-group">
+                <label for="fullname">Fullname:</label>
+                <input type="text" id="fullname" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label for="department">Department:</label>
+                <input type="text" id="department" required>
+            </div>
+
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+
+            <center>
+            <button type="submit">Sign Up</button>
+            <p class="message" id="message"></p>
+            </center>
+        </form>
+      </div>
+     </p>
+
+       <footer class="footer">
+        <div class="footer-container">
+         <div class="footer-about">
+           <img src="Rccg_logo.png" alt="RCCG Logo" id="footer-logo" style="width: 40px; height: auto;"><span><h3>Open Heavens Parish</h3></span>
+           <div class="footer-address">
+            <img src="icons8-location-100.png" alt="" style="width: 20px; height: auto;">
+            <span><h5>No 13 Ntem Nsuwa, Use-Offot, Uyo, Akwa Ibom State</h5></span>
+           </div>
+        </div>
+
+        <div class="footer-links">
+         <h4>Quick Links</h4>
+            <ul>
+             <li><a href="index.html"><img src="icons8-home-250.png" alt="" style="width: 20px; height: auto; vertical-align: middle;"> Home</a></li>
+             <li><a href="services.html"><img src="icons8-service-100.png" alt="" style="width: 20px; height: auto; vertical-align: middle;"> Services</a></li>
+             <li><a href="contact.html"><img src="icons8-contact-100.png" alt="" style="width: 20px; height: auto; vertical-align: middle;"> Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+         <h4>Follow Us</h4>
+             <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+                <a href="#"><img src="icons8-x-250.png" alt="Twitter" /></a>
+                <a href="#"><img src="icons8-instagram-250.png" alt="Instagram" /></a>
+         </div>
+
+         <div class="footer-bottom">
+             <p>&copy; <span id="year"></span> 2025 Open Heavens Parish. All rights reserved.</p>
+          </div>
+    </footer>
+
+    <script src="script.js"></script>
+</html>
