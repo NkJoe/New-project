@@ -59,15 +59,15 @@ h1, h2, h3 {
 button1 {
     background-color: #00bfff;
     color: #fff;
-    text-transform: uppercase;
     transition: background-color 0.7s;
-    width: 20%;
-    display: flex;
-    text-align: center;
+    width: 25%;
+    margin-top: 20px;
     border: none;
     padding: 15px 20px;
     border-radius: 10px;
     cursor: pointer;
+    position:flex;
+    top:100%
 }
 
 button1:hover {
