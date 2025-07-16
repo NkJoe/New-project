@@ -1,22 +1,14 @@
-* {
-    box-sizing: border-box !important;
-    margin: 5px;
-    padding: 1px;
-}
 
 body {
     background-image: url('j-m-4igCpD-Lnfg-unsplash.jpg');
+    background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
-    background-color: #1176089a;;
-    display: flow-root;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
 }
 
 h1, h2, h3 {
     color: #f8f5f5;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.812);
 }
 
 .images {
@@ -25,11 +17,12 @@ h1, h2, h3 {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    margin-top: 7%;
 }
 
 .header {
     align-items: center;
-    justify-content: baseline center;
+    justify-content: center;
     text-align: center;
     margin-bottom: auto;
 }
@@ -39,8 +32,9 @@ h1, h2, h3 {
     max-width: 600px;
     margin: auto;
     padding: 30px;
-    background: #cbc3c3;
+    background: #cbc3c360;
     border-radius: 15px;
+    margin-bottom: 30%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -51,14 +45,15 @@ h1, h2, h3 {
 .input-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: 450;
+    font-weight: 500
 }
 
 .input-group input {
+    font-weight: 500;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 9px;
 }
 
 button {
@@ -92,7 +87,7 @@ body {
 }
 
 .navbar {
-   background-color:#333;
+  background-color:#333;
   color: white;
   display: flex;
   align-items: center;
@@ -152,7 +147,7 @@ body {
     display: flex;
   }
   .menu-toggle {
-    display: block;
+  display: block;
   font-size: 26px;
   color: white;
   background: none;

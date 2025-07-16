@@ -49,7 +49,7 @@ body {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: black;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
