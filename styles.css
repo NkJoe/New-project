@@ -112,7 +112,7 @@ body {
   display: grid;
   place-items: end;
 }
-.welcome .button {
+ button1 {
   background-color: #00bfff;
   color: white;
   padding: 1rem 2.5rem;
@@ -123,9 +123,73 @@ body {
   position: relative;
   top: 40px;
   transition: background-color 0.7s;
+  cursor: pointer;
 }
-.welcome .button:hover {
+button1:hover {
   background-color: #0080ff;
+}
+/* welcome button overlay*/
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 24, 24, 0.651);
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+/* Popup content */
+.popup-content {
+  background: rgb(227, 218, 218);
+  padding: 2rem;
+  color: rgb(1, 6, 18);
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  animation: slideIn 0.3s ease-out;
+}
+.popup-content h2 {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.popup-content h4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 1.5rem;
+}
+.popup-content h5 {
+  font-size: 15px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow: none;
+  font-style: italic;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 24px;
+  color: #6c6969;
+  cursor: pointer;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Vision section */
@@ -150,7 +214,7 @@ body {
   font-family:'Times New Roman', Times, serif;
   text-transform: uppercase;
 }
-.vision .button {
+button2 {
   background-color: #00bfff;
   color: white;
   padding: 1rem 2.5rem;
@@ -161,8 +225,9 @@ body {
   position: relative;
   top: 10px;
   transition: background-color 0.7s;
+  cursor: pointer;
 }
-.vision .button:hover {
+button2:hover {
  background-color: #0080ff;
 }
 
@@ -290,7 +355,7 @@ body {
 .welcome-text {
   animation: fadeIn 1s ease-out;
 }
-.welcome .button:hover {
+.welcome button1:hover {
    animation: zoomGlow 0.3s forwards;
 }
 /* vision animation*/
