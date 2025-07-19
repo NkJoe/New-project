@@ -28,10 +28,10 @@ h1, h2, h3 {
 }
 
 .container {
-    width: 100%;
+    width: 80%;
     max-width: 600px;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
     background: #cbc3c360;
     border-radius: 15px;
     margin-bottom: 30%;
@@ -58,21 +58,20 @@ h1, h2, h3 {
     border-radius: 9px;
 }
 
-button1 {
+button {
     background-color: #00bfff;
     color: #fff;
     transition: background-color 0.7s;
-    width: 25%;
     margin-top: 20px;
     border: none;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
     position:flex;
     top:100%
 }
 
-button1:hover {
+button:hover {
     background-color: #0080ff;
     animation: zoomGlow 0.3s forwards;
 }
