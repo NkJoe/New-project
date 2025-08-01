@@ -763,6 +763,13 @@ main {
     padding: 1rem 2rem;
   }
   
+  /* Remove background animations on mobile */
+  .welcome::before,
+  .vision::before,
+  .services::before {
+    animation: none;
+  }
+  
   .nav-links {
     position: fixed;
     top: 80px;
@@ -827,11 +834,11 @@ main {
   }
   
   .vision-items {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
   
   .service-cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
   }
   
   .footer-container {
