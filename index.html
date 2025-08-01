@@ -3,145 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Heavens</title>
+    <title>Open Heavens Parish - RCCG | Cathedral of Champions</title>
+    <meta name="description" content="Open Heavens Parish - Cathedral of Champions. Join us for worship, Bible study, and spiritual growth in Uyo, Akwa Ibom State.">
+    <meta name="keywords" content="RCCG, Open Heavens Parish, Church, Worship, Uyo, Akwa Ibom, Nigeria">
+    <meta name="author" content="Open Heavens Parish">
+    <meta property="og:title" content="Open Heavens Parish - RCCG">
+    <meta property="og:description" content="Cathedral of Champions - Where faith ignites destiny">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Sora:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="icon" href="Rccg_logo.png" type="image/x-icon"> 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <header>
+    <header class="header">
        <nav class="navbar">
-         <div class="logo"><img src="Rccg_logo.png" alt="RCCG Logo" id="logo"  style="width: 40px; height: auto;"></div>
+         <div class="logo">
+             <img src="Rccg_logo.png" alt="RCCG Logo" id="logo">
+             <span class="logo-text">Open Heavens</span>
+         </div>
          <ul class="nav-links" id="navLinks">
-             <li><a href="index.html">Home</a></li>
-             <li><a href="about.html">About</a></li>
-             <li><a href="contact.html">Contact</a></li>
-             <li><a href="signup.html">Sign Up</a></li>
-             <li><a href="login.html">Login</a></li>
-    </ul>
-    <button class="menu-toggle" id="menuToggle">&#9776;</button>
-  </nav>
-
+             <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+             <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+             <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+             <li><a href="signup.html" class="nav-link"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+             <li><a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+         </ul>
+         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+             <span></span>
+             <span></span>
+             <span></span>
+         </button>
+       </nav>
     </header>
 
     <main>
-        <!--welcome section -->
+        <!-- Welcome section -->
         <section class="welcome" id="welcome">
-            <div class="welcome-text">
-                <h1>Welcome To</h1> 
-                    <h1>Open Heaven Parish</h1>
-                    <p><h5>Cathedral of Champions</h5></p>
-                <br>
-                    <p><h3>Where faith ignites destiny and champions are born.</h3></p>
-                    <p><h3>Come experience the presence of God and the power of His transformation.</h3></p>
-                    <p><h3>A place to belong, believe, and become. Worship with us and experience the love of Christ.</h3></p>
-                <br>
-                <button1 id="openPopup">Join Us</button1>
+            <div class="welcome-overlay"></div>
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <h1 class="welcome-title">
+                        <span class="title-line">Welcome To</span>
+                        <span class="title-line highlight">Open Heaven Parish</span>
+                    </h1>
+                    <p class="welcome-subtitle">Cathedral of Champions</p>
+                </div>
+                <div class="welcome-description">
+                    <p>Where faith ignites destiny and champions are born.</p>
+                    <p>Come experience the presence of God and the power of His transformation.</p>
+                    <p>A place to belong, believe, and become. Worship with us and experience the love of Christ.</p>
+                </div>
+                <div class="welcome-actions">
+                    <button class="cta-button secondary" id="openPopup">
+                        <i class="fas fa-church"></i>
+                        Join Us Today
+                    </button>
+                </div>
+            </div>
 
-                     <div class="popup-overlay" id="popupOverlay">
-                         <div class="popup-content">
-                             <span class="close-btn" id="closePopup">&times;</span>
-                             <h2>Join Us</h2>
-                             <br>
-                             <img src="icons8-location-100.png" alt="" style="width: 20px; height: auto;">
-                                <p><h5>No 28, Idongsit Ntemisua Avenue, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</h5></p>
-                                <br>
-                             <p><h4><a href="signup.html">Sign Up</a> &nbsp;&nbsp;&nbsp; <a href="#">Log In</a></h4></p>    
-                         </div>
-                     </div>
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup-content">
+                    <span class="close-btn" id="closePopup" aria-label="Close popup">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h2><i class="fas fa-map-marker-alt"></i> Join Us</h2>
+                    <div class="location-info">
+                        <i class="fas fa-location-dot"></i>
+                        <p>No 28, Idongsit Ntemisua Avenue, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</p>
+                    </div>
+                    <div class="popup-actions">
+                        <a href="signup.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+                        <a href="login.html" class="btn btn-secondary"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- vision section-->
+        <!-- Vision section -->
         <section class="vision">
-            <div class="vision-text-1">
-                <h2>Our Vision</h2>
-                <br>
-                <div class="vision-text-2">
-                    <p>To make heaven.</p>
-                    <p>To take as many people with us.</p>
-                    <p>To have a member of RCCG in every family of all nations.</p>
-                </div>
-                <br>
-                <button1  id="openPopup">Support Us</button1>
-
-                  <div class="popup-overlay" id="popupOverlay">
-                      <div class="popup-content">
-                       <span class="close-btn" id="closePopup">&times;</span>
-                         <h2>Join Us</h2>
-                         <br>
-                         <img src="icons8-location-100.png" alt="" style="width: 20px; height: auto;">
-                         <p><h5>No 13, Ntem Nsuwa, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</h5></p>
-                         <br>
-                         <p><h4><a href="signup.html">Sign Up</a> &nbsp;&nbsp;&nbsp; <a href="#">Log In</a></h4></p> 
+            <div class="vision-overlay"></div>
+            <div class="vision-content">
+                <div class="vision-text">
+                    <h2 class="section-title">Our Vision</h2>
+                    <div class="vision-items">
+                        <div class="vision-item">
+                            <i class="fas fa-heaven"></i>
+                            <p>To make heaven.</p>
                         </div>
-                  </div>
+                        <div class="vision-item">
+                            <i class="fas fa-users"></i>
+                            <p>To take as many people with us.</p>
+                        </div>
+                        <div class="vision-item">
+                            <i class="fas fa-globe"></i>
+                            <p>To have a member of RCCG in every family of all nations.</p>
+                        </div>
+                    </div>
+                    <button class="cta-button secondary" id="openPopup2">
+                        <i class="fas fa-hands-helping"></i>
+                        Support Our Mission
+                    </button>
+                </div>
+            </div>
+
+            <div class="popup-overlay" id="popupOverlay2">
+                <div class="popup-content">
+                    <span class="close-btn" id="closePopup2" aria-label="Close popup">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <h2><i class="fas fa-map-marker-alt"></i> Join Us</h2>
+                    <div class="location-info">
+                        <i class="fas fa-location-dot"></i>
+                        <p>No 13, Ntem Nsuwa, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</p>
+                    </div>
+                    <div class="popup-actions">
+                        <a href="signup.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+                        <a href="login.html" class="btn btn-secondary"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- services section-->
+        <!-- Services section -->
         <section class="services" id="services">
-            <div class="service-text">
-                <h2>Our Services</h2>
+            <div class="services-overlay"></div>
+            <div class="services-content">
+                <h2 class="section-title">Our Services</h2>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Sunday School</h3>
+                        <p class="service-time"><i class="fas fa-clock"></i> Sundays @ 8:00 AM</p>
+                        <p class="service-description">Join us for Bible study and spiritual growth</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <h3>Worship Service</h3>
+                        <p class="service-time"><i class="fas fa-clock"></i> Sundays @ 9:00 AM</p>
+                        <p class="service-description">Experience the power of God through worship</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bible"></i>
+                        </div>
+                        <h3>Bible Study</h3>
+                        <p class="service-time"><i class="fas fa-clock"></i> Tuesdays @ 5:00 PM</p>
+                        <p class="service-description">Deep dive into God's word together</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Faith Clinic</h3>
+                        <p class="service-time"><i class="fas fa-clock"></i> Thursdays @ 6:00 PM</p>
+                        <p class="service-description">Spiritual healing and prayer ministry</p>
+                    </div>
+                </div>
+                <a href="#" class="cta-button secondary">
+                    <i class="fas fa-video"></i>
+                    Watch Us Live
+                </a>
             </div>
-            <br>
-            <div class="service-cards">
-                <div class="card">
-                    <h3>Sunday School</h3>
-                    <p>Sundays @ 8:00 AM</p>
-                </div>
-                <div class="card">
-                    <h3>Worship Service</h3>
-                    <p>Sundays @ 9:00 AM</p>
-                </div>
-                <div class="card">
-                    <h3>Bible Study</h3>
-                    <p>Tuesdays @ 5:00 PM</p>
-                </div>
-                <div class="card">
-                    <h3>Faith Clinic</h3>
-                    <p>Thursdays @ 6:00 PM</p>
-                </div>
-            </div>
-            <br>
-            <a href="#" class="button">Watch Us live</a>
         </section>
     </main>
        
-     <footer class="footer">
+    <footer class="footer">
         <div class="footer-container">
-         <div class="footer-about">
-           <img src="Rccg_logo.png" alt="RCCG Logo" id="footer-logo" style="width: 40px; height: auto;"><span><h3>Open Heavens Parish</h3></span>
-           <div class="footer-address">
-            <img src="icons8-location-100.png" alt="" style="width: 20px; height: auto;">
-            <span><h5>No 28, Idongsit Ntemisua Avenue, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</h5></span>
-           </div>
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="Rccg_logo.png" alt="RCCG Logo" id="footer-logo">
+                    <h3>Open Heavens Parish</h3>
+                </div>
+                <div class="footer-address">
+                    <i class="fas fa-location-dot"></i>
+                    <p>No 28, Idongsit Ntemisua Avenue, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services.html"><i class="fas fa-church"></i> Services</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-links">
-         <h4>Quick Links</h4>
-            <ul>
-             <li><a href="index.html"><img src="icons8-home-250.png" alt="" style="width: 20px; height: auto; vertical-align: middle;"> Home</a></li>
-             <li><a href="services.html"><img src="icons8-service-100.png" alt="" style="width: 20px; height: auto; vertical-align: middle;"> Services</a></li>
-             <li><a href="contact.html"><img src="icons8-contact-100.png" alt="" style="width: 20px; height: auto; vertical-align: middle;"> Contact</a></li>
-            </ul>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Open Heavens Parish. All rights reserved.</p>
         </div>
-
-        <div class="footer-contact">
-         <h4>Follow Us</h4>
-             <div class="social-icons">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-                <a href="#"><img src="icons8-x-250.png" alt="Twitter" /></a>
-                <a href="#"><img src="icons8-instagram-250.png" alt="Instagram" /></a>
-         </div>
-
-         <div class="footer-bottom">
-             <p>&copy; <span id="year"></span> 2025 Open Heavens Parish. All rights reserved.</p>
-          </div>
     </footer>
+    
     <script src="button1.js"></script>
-    <script src="script.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
