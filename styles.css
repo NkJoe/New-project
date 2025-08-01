@@ -770,6 +770,21 @@ main {
     animation: none;
   }
   
+  /* Remove all scroll-triggered animations on mobile for normal scrolling */
+  .welcome-content,
+  .title-line,
+  .title-line.highlight,
+  .welcome-subtitle,
+  .welcome-description,
+  .welcome-actions,
+  .section-title,
+  .vision-item,
+  .service-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
   .nav-links {
     position: fixed;
     top: 80px;
