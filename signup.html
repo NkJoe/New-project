@@ -1,99 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Open Heaven Parish</title>
-        <link rel="icon" href="Rccg_logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="signup.css">
-        <link rel="stylesheet" href="styles.css" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Heavens Parish - RCCG | Sign Up</title>
+    <meta name="description" content="Sign up to become a member of Open Heavens Parish - Cathedral of Champions">
+    <meta name="keywords" content="RCCG, Open Heavens Parish, Sign Up, Registration, Church, Uyo">
+    <meta name="author" content="Open Heavens Parish">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Sora:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="icon" href="Rccg_logo.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
 
- <body>
-    <main>
-        <nav class="navbar">
-            <div class="brand"><img src="Rccg_logo.png" alt="" style="width: 60px; height: auto;"></div>
-             <button class="menu-toggle" id="menuToggle">&#9776;</button> 
-             <ul class="nav-links" id="navLinks">
-             <li><a href="index.html">Home</a></li>
-             <li><a href="#">About</a></li>
-             <li><a href="#">Contact</a></li>
-             <li><a href="#">Sign Up</a></li>
-             <li><a href="#">Login</a></li>
-             </ul>
-        </nav>
-         <script src="script.js"></script>
+<body>
+    <header class="header">
+       <nav class="navbar">
+         <div class="logo">
+             <img src="Rccg_logo.png" alt="RCCG Logo" id="logo">
+         </div>
+         <ul class="nav-links" id="navLinks">
+             <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+             <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+             <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+             <li><a href="signup.html" class="nav-link active"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+             <li><a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+         </ul>
+         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+             <span></span>
+             <span></span>
+             <span></span>
+         </button>
+       </nav>
+    </header>
 
-        <div class="images">
-            <img src="Rccg_logo.png" alt="" style="width: 160px; height: auto; margin-top: 20px;">
-        </div>
+        <main>
+        <!-- Sign Up Section -->
+        <section class="signup-section">
+            <div class="signup-overlay"></div>
+            <div class="signup-content">
+                <div class="signup-header">
+                    <div class="signup-logo">
+                        <img src="Rccg_logo.png" alt="RCCG Logo" class="logo-image">
+                    </div>
+                    <h2 class="signup-subtitle">Members Registration</h2>
+                </div>
+                
+                <div class="signup-form-container">
+                    <form id="signupform" class="signup-form">
+                        <h3 class="form-title">Sign Up</h3>
+                        
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label for="fullname">
+                                    <i class="fas fa-user"></i>
+                                    Full Name
+                                </label>
+                                <input type="text" id="fullname" required placeholder="Enter your full name">
+                            </div>
 
-        <div class="header">
-            <h1>Welcome to Open Heaven Parish</h1>
-               <h2>Members Registration</h2> 
-        </div>
-    <p>
-    <br>
-      <div class="container">
-        <form id="signupform">
-            <h2>Sign Up</h2>
-        <br> 
-             <div class="input-group">
-                <label for="fullname">Fullname:</label>
-                <input type="text" id="fullname" required>
+                            <div class="input-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i>
+                                    Phone Number
+                                </label>
+                                <input type="tel" id="phone" required placeholder="Enter your phone number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="department">
+                                    <i class="fas fa-church"></i>
+                                    Department
+                                </label>
+                                <select id="department" required>
+                                    <option value="">Select Department</option>
+                                    <option value="ushering">Ushering</option>
+                                    <option value="choir">Choir</option>
+                                    <option value="prayer">Prayer Band</option>
+                                    <option value="media">Media Team</option>
+                                    <option value="welfare">Welfare</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address
+                                </label>
+                                <input type="email" id="email" required placeholder="Enter your email">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="password">
+                                    <i class="fas fa-lock"></i>
+                                    Password
+                                </label>
+                                <input type="password" id="password" required placeholder="Create a password">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="confirm-password">
+                                    <i class="fas fa-lock"></i>
+                                    Confirm Password
+                                </label>
+                                <input type="password" id="confirm-password" required placeholder="Confirm your password">
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="signup-button">
+                                <i class="fas fa-user-plus"></i>
+                               Sign Up
+                            </button>
+                            <p class="message" id="message"></p>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <p>Already have an account? <a href="login.html">Sign In</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="input-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" required>
-            </div>
-
-            <div class="input-group">
-                <label for="department">Department:</label>
-                <input type="text" id="department" required>
-            </div>
-
-            <div class="input-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" required>
-            </div>
-
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-            </div>
-
-            <div class="input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" required>
-            </div>
-
-            <div class="input-group">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" required>
-            </div>
-         <br>
-            <center>
-            <button type="submit">Sign Up</button>
-            <p class="message" id="message"></p>
-            </center>
-        </form>
-      </div>
-     </p>
+        </section>
      </main>
+        
+     <footer class="footer">
+        <div class="footer-container">
+         <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="Rccg_logo.png" alt="RCCG Logo" id="footer-logo">
+                    <h3>Open Heavens Parish</h3>
+                </div>
+           <div class="footer-address">
+                    <i class="fas fa-location-dot"></i>
+                    <p>No 28, Idongsit Ntemisua Avenue, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</p>
+           </div>
+        </div>
 
-     <!-- Footer container -->
-  <div id="footer"></div>
+        <div class="footer-links">
+         <h4>Quick Links</h4>
+            <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-church"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
 
-  <!-- JS to inject the footer -->
-  <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-      });
-  </script>
+        <div class="footer-contact">
+         <h4>Follow Us</h4>
+             <div class="social-icons">
+                    <a href="https://www.facebook.com/Openheavenuyo" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+         </div>
 
+         <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Open Heavens Parish. All rights reserved.</p>
+          </div>
+    </footer>
+    
+    <script src="button1.js"></script>
     <script src="script.js"></script>
- </body>
+    <script src="signup.js"></script>
+</body>
 </html>

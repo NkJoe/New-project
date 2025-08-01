@@ -1,4 +1,4 @@
-// Mobile Navigation Toggle for Signup Page
+// Mobile Navigation Toggle for Login Page
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
@@ -50,60 +50,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Password toggle functionality
+    const passwordToggle = document.getElementById('passwordToggle');
+    const passwordInput = document.getElementById('password');
+
+    if (passwordToggle && passwordInput) {
+        passwordToggle.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            const icon = passwordToggle.querySelector('i');
+            if (type === 'text') {
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    }
+
     // Form validation and submission
-    const signupForm = document.getElementById('signupform');
+    const loginForm = document.getElementById('loginform');
     const messageElement = document.getElementById('message');
 
-    if (signupForm) {
-        signupForm.addEventListener('submit', function(e) {
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form values
-            const fullname = document.getElementById('fullname').value;
-            const phone = document.getElementById('phone').value;
-            const department = document.getElementById('department').value;
-            const username = document.getElementById('username').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
+            const remember = document.getElementById('remember').checked;
 
             // Basic validation
-            if (!fullname || !phone || !department || !username || !email || !password || !confirmPassword) {
+            if (!email || !password) {
                 showMessage('Please fill in all fields', 'error');
-        return;
-    }
-
-            if (password !== confirmPassword) {
-                showMessage('Passwords do not match', 'error');
-        return;
-    }
-
-            if (password.length < 6) {
-                showMessage('Password must be at least 6 characters long', 'error');
-        return;
-    }
+                return;
+            }
 
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 showMessage('Please enter a valid email address', 'error');
-        return;
-    }
+                return;
+            }
 
-            // Phone validation
-            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
-                showMessage('Please enter a valid phone number', 'error');
-        return;
+            if (password.length < 6) {
+                showMessage('Password must be at least 6 characters long', 'error');
+                return;
             }
 
             // Simulate form submission
-            showMessage('Creating your account...', 'success');
+            showMessage('Signing you in...', 'success');
             
             // Simulate API call
             setTimeout(() => {
-                showMessage('Account created successfully! Welcome to Open Heavens Parish.', 'success');
-                signupForm.reset();
+                showMessage('Login successful! Welcome back to Open Heavens Parish.', 'success');
+                
+                // Simulate redirect after successful login
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
             }, 2000);
         });
     }
@@ -141,18 +149,65 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Add loading animation to form submission
-    const submitButton = signupForm?.querySelector('button[type="submit"]');
+    const submitButton = loginForm?.querySelector('button[type="submit"]');
     if (submitButton) {
-        signupForm.addEventListener('submit', function() {
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
+        loginForm.addEventListener('submit', function() {
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...';
             submitButton.disabled = true;
             
             // Reset button after form processing
             setTimeout(() => {
-                submitButton.innerHTML = '<i class="fas fa-user-plus"></i> Create Account';
+                submitButton.innerHTML = '<i class="fas fa-sign-in-alt"></i> Sign In';
                 submitButton.disabled = false;
             }, 3000);
         });
     }
-});
 
+    // Remember me functionality
+    const rememberCheckbox = document.getElementById('remember');
+    const savedEmail = localStorage.getItem('savedEmail');
+    
+    if (rememberCheckbox && savedEmail) {
+        document.getElementById('email').value = savedEmail;
+        rememberCheckbox.checked = true;
+    }
+
+    // Save email when form is submitted with remember me checked
+    if (loginForm && rememberCheckbox) {
+        loginForm.addEventListener('submit', function() {
+            if (rememberCheckbox.checked) {
+                localStorage.setItem('savedEmail', document.getElementById('email').value);
+            } else {
+                localStorage.removeItem('savedEmail');
+            }
+        });
+    }
+
+    // Forgot password functionality
+    const forgotPasswordLink = document.querySelector('.forgot-password');
+    if (forgotPasswordLink) {
+        forgotPasswordLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            if (!email) {
+                showMessage('Please enter your email address first', 'error');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage('Please enter a valid email address', 'error');
+                return;
+            }
+
+            showMessage('Password reset link sent to your email', 'success');
+        });
+    }
+
+    // Auto-focus on email field when page loads
+    const emailInput = document.getElementById('email');
+    if (emailInput && !emailInput.value) {
+        emailInput.focus();
+    }
+}); 
