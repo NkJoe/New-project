@@ -121,3 +121,15 @@
         padding: 16px 6px;
     }
 }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: none;}
+}
+.animate-fadeinup {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+.donate-title .highlight {
+    color: #0d6efd;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+}
