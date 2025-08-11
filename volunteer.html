@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | Open Heavens Parish - RCCG</title>
+    <meta name="description" content="Join our volunteer team at Open Heavens Parish - RCCG. Serve, grow, and make a difference in our community.">
+    <meta name="keywords" content="RCCG, Open Heavens Parish, Volunteer, Serve, Church, Uyo, Akwa Ibom">
+    <meta name="author" content="Open Heavens Parish">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="Rccg_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="volunteer.css">
+</head>
+<body>
+    <header class="header">
+       <nav class="navbar">
+         <div class="logo">
+             <img src="Rccg_logo.png" alt="RCCG Logo" id="logo">
+         </div>
+         <ul class="nav-links" id="navLinks">
+             <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+             <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+             <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+             <li><a href="signup.html" class="nav-link"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+             <li><a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+         </ul>
+         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+             <span></span>
+             <span></span>
+             <span></span>
+         </button>
+       </nav>
+    </header>
+
+    <main>
+        <!-- Volunteer Hero Section -->
+        <section class="donate-hero">
+            <div class="donate-overlay"></div>
+            <div class="donate-content">
+                <h1 class="donate-title">Volunteer With Us</h1>
+                <h2 class="contact-subtitle">Serve, Grow, and Make a Difference.</h2>
+            </div>
+        </section>
+
+        <!-- Volunteer Form Section -->
+        <section class="donate-section">
+            <div class="donate-form-container">
+                <form class="donate-form" id="volunteerForm">
+                    <div class="form-group">
+                        <label for="volunteerName"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="volunteerName" name="volunteerName" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerEmail"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="volunteerEmail" name="volunteerEmail" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="volunteerPhone"><i class="fas fa-phone"></i> Phone</label>
+                        <input type="tel" id="volunteerPhone" name="volunteerPhone" required placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest"><i class="fas fa-hands-helping"></i> Area of Interest</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select Area</option>
+                            <option value="ushering">Ushering</option>
+                            <option value="choir">Choir</option>
+                            <option value="media">Media</option>
+                            <option value="children">Children Ministry</option>
+                            <option value="prayer">Prayer Band</option>
+                            <option value="welfare">Welfare</option>
+                            <option value="evangelism/follow-up">Evangelism/Follow-Up</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Why do you want to volunteer?</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Tell us why you want to serve..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button primary"><i class="fas fa-hands-helping"></i> Volunteer</button>
+                    <div id="volunteerMessage" class="form-message"></div>
+                </form>
+                <div style="margin-top:2rem; text-align:center;">
+                    <h3>Contact for Volunteering</h3>
+                    <p><strong>Email:</strong> <a href="mailto:info@openheavensparish.org">info@openheavensparish.org</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+2348012345678">+234 801 234 5678</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+        
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="Rccg_logo.png" alt="RCCG Logo" id="footer-logo">
+                    <h3>Open Heavens Parish</h3>
+                </div>
+                <div class="footer-address">
+                    <i class="fas fa-location-dot"></i>
+                    <p>No 28, Idongsit Ntemisua Avenue, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-church"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Openheavenuyo" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Open Heavens Parish. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="volunteer.js"></script>
+    </body>
+</html>

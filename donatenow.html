@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now | Open Heavens Parish - RCCG</title>
+    <meta name="description" content="Support the mission of Open Heavens Parish - RCCG. Donate securely online to help us reach more lives.">
+    <meta name="keywords" content="RCCG, Open Heavens Parish, Donate, Giving, Church, Uyo, Akwa Ibom">
+    <meta name="author" content="Open Heavens Parish">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="Rccg_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css"><!-- Reuse contact.css for layout and footer styles -->
+    <link rel="stylesheet" href="donatenow.css">
+</head>
+<body>
+    <header class="header">
+       <nav class="navbar">
+         <div class="logo">
+             <img src="Rccg_logo.png" alt="RCCG Logo" id="logo">
+         </div>
+         <ul class="nav-links" id="navLinks">
+             <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+             <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+             <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+             <li><a href="signup.html" class="nav-link"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+             <li><a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+         </ul>
+         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+             <span></span>
+             <span></span>
+             <span></span>
+         </button>
+       </nav>
+    </header>
+
+    <main>
+        <!-- Donate Hero Section -->
+        <section class="donate-hero">
+            <div class="donate-overlay"></div>
+            <div class="donate-content">
+                <h1 class="donate-title">Donate Now</h1>
+                <h2 class="contact-subtitle">Support Our Mission & Ministry</h2>
+            </div>
+        </section>
+
+        <!-- Donate Form Section -->
+        <section class="donate-section">
+            <div class="donate-form-container">
+                <form class="donate-form" id="donateForm">
+                    <div class="form-group">
+                        <label for="donorName"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="donorName" name="donorName" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="donorEmail"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="donorEmail" name="donorEmail" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount"><i class="fas fa-naira-sign"></i> Amount (₦)</label>
+                        <input type="number" id="amount" name="amount" min="100" required placeholder="Enter Amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="purpose"><i class="fas fa-hand-holding-heart"></i> Purpose</label>
+                        <select id="purpose" name="purpose" required>
+                            <option value="">Select Purpose</option>
+                            <option value="tithe">Tithe</option>
+                            <option value="offering">Offering</option>
+                            <option value="thanksgiving">Thanksgiving</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-button primary"><i class="fas fa-donate"></i> Donate</button>
+                    <div id="donateMessage" class="form-message"></div>
+                </form>
+                <div style="margin-top:2rem; text-align:center;">
+                    <h3>Bank Transfer Details</h3>
+                    <p><strong>Account Name:</strong> RCCG Open Heavens Parish</p>
+                    <p><strong>Account Number:</strong> 1234567890</p>
+                    <p><strong>Bank:</strong> Zenith Bank</p>
+                </div>
+            </div>
+        </section>
+    </main>
+        
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="Rccg_logo.png" alt="RCCG Logo" id="footer-logo">
+                    <h3>Open Heavens Parish</h3>
+                </div>
+                <div class="footer-address">
+                    <i class="fas fa-location-dot"></i>
+                    <p>No 28, Idongsit Ntemisua Avenue, Use-Offot, Uyo, Akwa Ibom State, Nigeria.</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-church"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Openheavenuyo" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Open Heavens Parish. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="donatenow.js"></script>
+</body>
+</html>

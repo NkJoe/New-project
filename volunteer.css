@@ -1,0 +1,123 @@
+/* Volunteer Hero Section */
+.donate-hero {
+    position: relative;
+    background: url('j-m-4igCpD-Lnfg-unsplash.jpg') center/cover no-repeat;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 44, 99, 0.7);
+    z-index: 1;
+}
+
+.donate-content {
+    margin-top: 60px;
+    text-shadow: #05101d 0px 0px 15px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.donate-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.contact-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+/* Volunteer Form Section */
+.donate-section {
+    padding: 60px 0 40px 0;
+    background: #fff;
+}
+
+.donate-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f1f5fbad;
+    border-radius: 12px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 12px rgba(0,44,99,0.06);
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.donate-form .form-group label {
+    font-weight: 500;
+    color: #002c63;
+}
+
+.donate-form .form-group input,
+.donate-form .form-group select,
+.donate-form .form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
+    transition: border 0.2s;
+}
+
+.donate-form .form-group input:focus,
+.donate-form .form-group select:focus,
+.donate-form .form-group textarea:focus {
+    border-color: #0d6efd;
+    outline: none;
+}
+
+.cta-button.primary {
+    background: #002c63;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.cta-button.primary i {
+    margin-left: 160px;
+}
+
+.cta-button.primary:hover {
+    background: #0d6efd;
+}
+
+.form-message {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #0d6efd;
+    min-height: 22px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .donate-title {
+        font-size: 2rem;
+    }
+    .donate-section {
+        padding: 32px 0 20px 0;
+    }
+    .donate-form-container {
+        padding: 16px 6px;
+    }
+}
