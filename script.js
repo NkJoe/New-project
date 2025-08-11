@@ -36,6 +36,17 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    header.style.background = 'rgba(17, 24, 39, 0.98)';
+    header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+  } else {
+    header.style.background = 'rgba(17, 24, 39, 0.95)';
+    header.style.boxShadow = 'none';
+  }
+});
+
 // Set the current year dynamically
 document.getElementById("year").textContent = new Date().getFullYear();
 
