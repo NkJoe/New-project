@@ -203,7 +203,7 @@ main {
 .welcome-title {
   position: absolute;
   left: 0;
-  top: 350px;
+  top: 200px;
   margin-bottom: 1rem;
 }
 
@@ -228,23 +228,20 @@ main {
   font-size: 10rem;
   font-weight: 400;
 }
-
-.welcome-subtitle {
+.title-line-subtitle {
   position: absolute;
   left: 0;
-  font-size: 2rem;
+  top: 350px;
+  font-size: 2.5rem;
   font-weight: 300;
-  margin-top: 18rem;
-  margin-bottom: 0;
   opacity: 0;
   animation: fadeIn 1s ease-out 0.6s forwards;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   letter-spacing: 0.1em;
 }
-
 .welcome-description {
-  margin-top: 30rem;
+  margin-top: 20rem;
   position: absolute;
   right: 0;
   margin-right: 1px;
@@ -256,15 +253,15 @@ main {
 
 .welcome-description p {
   text-align: right;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
   font-weight: 400;
   font-family: 'Cormorant Garamond', serif; /* Changed to a more professional font */
 }
 
 .welcome-actions {
-  margin-top: 60rem;
+  margin-top: 39rem;
   opacity: 0;
   animation: fadeIn 1s ease-out 1.2s forwards;
 }
@@ -843,7 +840,7 @@ main {
     line-height: 1.2;
     max-width: 100%;
   }
-  .welcome-subtitle {
+ .title-line-subtitle{
     position: static;
     left: unset;
     margin-top: 0;
@@ -939,7 +936,7 @@ main {
   .title-line.highlight {
     font-size: 3rem;
   }
-  .welcome-subtitle {
+ .title-line-subtitle {
     font-size: 1rem;
   }
   .welcome-description p {
@@ -979,5 +976,64 @@ main {
   .cta-button {
     padding: 0.5rem 0.8rem;
     font-size: 0.85rem;
+  }
+}
+
+/* Responsive Design for Desktop and Large Screens */
+@media (max-width: 1201px) {
+  .welcome-content {
+    max-width: 1200px;
+    padding: 2rem 4rem;
+    margin-top: 80px;
+    min-height: 100vh;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcome-title {
+    position: static;
+    left: unset;
+    top: unset;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .title-line,
+  .title-line.highlight {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    max-width: 100%;
+    display: block;
+  }
+  .title-line-subtitle {
+    position: static;
+    left: unset;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .welcome-description {
+    position: static;
+    right: unset;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    opacity: 1;
+    animation: none;
+  }
+  .welcome-description p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .welcome-actions {
+    margin-top: 1rem;
+    text-align: center;
+    opacity: 1;
+    animation: none;
   }
 }
